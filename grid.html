@@ -1,0 +1,58 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .wrapper{
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            grid-column-gap: 1em;
+            grid-row-gap: 1em;
+           
+        }
+        .wrapper > div{
+            background-color: rgb(221, 25, 42);
+            padding: 4em;
+        }
+        .wrapper> div:nth-child(odd){
+            background-color: rgb(39, 196, 52);
+        }
+
+        .nest{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-column-gap: 1em;
+            grid-row-gap: 1em;
+            grid-area: 1/3;
+        }
+
+        .nest > div{
+            background-color: rgb(168, 120, 15);
+            padding: 4em;
+            margin-top: 10px;
+        }
+        .nest> div:nth-child(2){
+            background-color: rgb(133, 9, 9);
+        }
+        .nest> div:nth-child(3){
+            background-color: rgb(133, 9, 9);
+        }
+        .box-1{
+            grid-row: 1/3;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+       <div>1</div> 
+       <div>2</div> 
+    </div>
+    <div class="nest">
+        <div class="box-1">3</div> 
+        <div>4</div> 
+        <div>5</div> 
+     </div>
+</body>
+</html>
